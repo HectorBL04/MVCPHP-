@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>PAGINA PRINCIPAL</title>
 </head>
 <body>
 <?
 echo "Hola Mundo";
 
 
-echo "nueva version 0.002"
+echo "nueva version 0.004"
 
 
 
