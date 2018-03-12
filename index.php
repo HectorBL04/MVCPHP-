@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>PAGINA PRINCIPAL</title>
-</head>
-<body>
-	<h1> PRIMER MVC </h1>
-<?
-echo "Hola Mundo";
+<?php 
+require_once 'system/core/config.php';
+require_once 'system/core/functions.php';
+require_once 'system/core/init.php';
 
+$router = new Router();
 
-echo "  nueva version 0.004  "
+// Valida que el controlador exista, sino retorna el controlador 'Error'
+$controller = validar($router->getController());
 
+require PATH_CONTROLLERS . "{$controller}/{$controller}Controller.php";
 
+$controller .= 'Controller';
 
-?>
-<footer>
-	
-	<span>   github/HectorBL04 </span>
-
-</footer>
-</body>
-</html>
-
-
+new $controller();
